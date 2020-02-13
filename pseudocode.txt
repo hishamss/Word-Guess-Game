@@ -1,0 +1,8 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Guess the Name of the animal in the Zoo then display the animal pic and play the animal sound if you are right!!!//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1. create main game object which contains all the game data.
+2. create an object that contains a list of animal names with their data as pic and sound and put evertying in the main object.
+3. create function to pick randomly from the animal list and add this function to the main game object
+4. rand function will be executed after the page loads and will add dashes on the page represnting the number of charachters of the picked word.
+5. listen to any key pressed and check if this letter exists in the picked word.
