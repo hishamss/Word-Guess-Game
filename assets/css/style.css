@@ -1,3 +1,7 @@
+body {
+  background-image: url("../images/blue.jpg");
+  padding: 20px;
+}
 #curr-word p {
   display: inline-block;
   margin: 0 3px;
@@ -5,4 +9,12 @@
 
 #failed p {
   display: inline-block;
+}
+
+.main {
+  background-image: url("../images/orange.jpg");
+  color: white;
+  width: auto;
+  margin: 0 390px;
+  padding: 20px 0;
 }
