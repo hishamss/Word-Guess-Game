@@ -6,3 +6,4 @@
 3. create function to pick randomly from the animal list and add this function to the main game object
 4. rand function will be executed after the page loads and will add dashes on the page represnting the number of charachters of the picked word.
 5. listen to any key pressed and check if this letter exists in the picked word.
+6. if the user guees the whole word increas win by 1 and call random function to start new word guess.
