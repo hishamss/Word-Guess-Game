@@ -7,6 +7,13 @@ body {
   margin: 0 3px;
 }
 
+.btn-primary {
+  background-color: white;
+  color: #ffaa1b;
+  font-weight: bold;
+  margin: 0 2px;
+}
+
 #failed p {
   display: inline-block;
 }

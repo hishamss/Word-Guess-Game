@@ -22,7 +22,10 @@ function random() {
   computer_choice();
   $("#curr-word").text("");
   for (i = 0; i < word.length; i++) {
-    $("#curr-word").append("<p id='p" + i + "'" + "><strong>_</strong></p>");
+    // $("#curr-word").append("<p id='p" + i + "'" + "><strong>_</strong></p>");
+    $("#curr-word").append(
+      "<button class='btn btn-primary' id='b" + i + "'" + "></button>"
+    );
   }
   guessed = 0;
   alreadyguessed = [];
@@ -41,7 +44,7 @@ $(document).keyup(function(event) {
     //   this loop will keep search in for the pressed key on word till nothing is found
     while (word.indexOf(key, match_index) != -1) {
       match_index = word.indexOf(key, match_index);
-      $("#p" + match_index).text(key);
+      $("#b" + match_index).text(key);
       match_index++;
       guessed++;
       alreadyguessed.push(key);
@@ -63,6 +66,6 @@ $(document).keyup(function(event) {
     win++;
     // this will display the word after the user guess it
     $("#answer").text("The answer was " + word);
-    random();
+    setTimeout(random, 300);
   }
 });
