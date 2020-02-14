@@ -14,7 +14,16 @@ function computer_choice() {
 }
 
 $(document).ready(function() {
+  $(".main").hide();
+
   random();
+  $("#start-btn").click(function() {
+    $(".main").show();
+    $("#start").hide();
+    //   document.getElementsByClassName("main").style.display = "block";
+    //   document.getElementById("start").style.display = "none";
+    console.log("hi");
+  });
 });
 
 // this function will be called after the page load or the user guess the whole word
@@ -24,7 +33,7 @@ function random() {
   for (i = 0; i < word.length; i++) {
     // $("#curr-word").append("<p id='p" + i + "'" + "><strong>_</strong></p>");
     $("#curr-word").append(
-      "<button class='btn btn-primary' id='b" + i + "'" + "></button>"
+      "<button class='btn btn-primary dashes' id='b" + i + "'" + "></button>"
     );
   }
   guessed = 0;
@@ -66,6 +75,7 @@ $(document).keyup(function(event) {
     win++;
     // this will display the word after the user guess it
     $("#answer").text("The answer was " + word);
+    // dilay 300 ms before call random() function
     setTimeout(random, 300);
   }
 });

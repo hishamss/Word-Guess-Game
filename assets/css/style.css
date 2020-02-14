@@ -1,17 +1,35 @@
 body {
-  background-image: url("../images/blue.jpg");
-  padding: 20px;
+  background-image: url("../images/zoo-cover-rsz1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100% 100%;
 }
 #curr-word p {
   display: inline-block;
   margin: 0 3px;
 }
 
-.btn-primary {
+.dashes {
   background-color: white;
   color: #ffaa1b;
   font-weight: bold;
   margin: 0 2px;
+}
+
+.dashes:hover {
+  background-color: white;
+  color: #ffaa1b;
+}
+
+.dashes:active {
+  background-color: white;
+  color: #ffaa1b;
+}
+
+.dashes:focus {
+  background-color: white;
+  color: #ffaa1b;
 }
 
 #failed p {
@@ -24,4 +42,45 @@ body {
   width: auto;
   margin: 0 390px;
   padding: 20px 0;
+}
+
+#start {
+  margin-top: 25%;
+  margin-left: 21.2%;
+}
+
+#start-btn {
+  background-color: #97a31d;
+  color: #6f4626;
+  font-family: "Lacquer", sans-serif;
+  border-color: #97a31d;
+  font-size: 4.25rem;
+  border-radius: 1.3rem;
+}
+
+#start-btn:hover {
+  background-color: #0f4825;
+  color: #6f4626;
+  font-family: "Lacquer", sans-serif;
+  border-color: #97a31d;
+  font-size: 4.25rem;
+  border-radius: 1.3rem;
+}
+
+#start-btn:active {
+  background-color: #97a31d;
+  color: #6f4626;
+  font-family: "Lacquer", sans-serif;
+  border-color: #97a31d;
+  font-size: 4.25rem;
+  border-radius: 1.3rem;
+}
+
+#start-btn:focus {
+  background-color: #0f4825;
+  color: #6f4626;
+  font-family: "Lacquer", sans-serif;
+  border-color: #97a31d;
+  font-size: 4.25rem;
+  border-radius: 1.3rem;
 }
