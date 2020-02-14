@@ -53,10 +53,15 @@ $(document).keyup(function(event) {
     $("#attempts").text(attempts);
     $("#failed").append("<p>" + key + ", </p>");
   }
+  //   Game Over
+  if (attempts == 0) {
+    location.replace("GameOver.html");
+  }
 
   //   if the user guessed the whole word
   if (guessed === word.length) {
     win++;
+    // this will display the word after the user guess it
     $("#answer").text("The answer was " + word);
     random();
   }
