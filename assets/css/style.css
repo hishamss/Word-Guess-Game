@@ -2,3 +2,7 @@
   display: inline-block;
   margin: 0 3px;
 }
+
+#failed p {
+  display: inline-block;
+}

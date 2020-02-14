@@ -28,7 +28,9 @@ function random() {
   alreadyguessed = [];
   //   the user can try the lenght of the picked word plus 4 to guess
   attempts = word.length + 4;
+  $("#attempts").text(attempts);
   $("#win").text(win);
+  $("#failed").text("");
 }
 // listen to any key pressed and check if the pressed key is in the word picked randomlly.
 $(document).keyup(function(event) {
@@ -46,9 +48,16 @@ $(document).keyup(function(event) {
     }
   }
 
+  if (word.indexOf(key) == -1) {
+    attempts--;
+    $("#attempts").text(attempts);
+    $("#failed").append("<p>" + key + ", </p>");
+  }
+
   //   if the user guessed the whole word
   if (guessed === word.length) {
     win++;
+    $("#answer").text("The answer was " + word);
     random();
   }
 });
