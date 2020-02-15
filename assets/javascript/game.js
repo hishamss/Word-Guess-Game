@@ -1,5 +1,14 @@
 var game = {
-  zoo_animals: ["OWL", "CAT", "BEAR", "GORILLA", "TIGER"],
+  zoo_animals: [
+    "ZEBRA",
+    "MONKEY",
+    "KOALA",
+    "RABBIT",
+    "LION",
+    "ELEPHANT",
+    "GIRAFFE",
+    "HIPPO"
+  ],
   animal_data: { owl: ["owl.jpg", "owl.mp3"], cat: ["cat.jpg", "cat.mp3"] }
 };
 var word,
@@ -7,6 +16,8 @@ var word,
   attempts,
   match_index,
   alreadyguessed = [],
+  BodyHeight,
+  CalculatedBodyHeight,
   win = 0;
 function computer_choice() {
   var rand = Math.floor(Math.random() * game.zoo_animals.length);
@@ -15,14 +26,13 @@ function computer_choice() {
 
 $(document).ready(function() {
   $(".main").hide();
-
+  BodyHeight = $("body").height();
+  CalculatedBodyHeight = BodyHeight * 0.5 - 60;
+  $("#start").css("margin-top", CalculatedBodyHeight);
   random();
   $("#start-btn").click(function() {
     $(".main").show();
     $("#start").hide();
-    //   document.getElementsByClassName("main").style.display = "block";
-    //   document.getElementById("start").style.display = "none";
-    console.log("hi");
   });
 });
 
@@ -79,3 +89,11 @@ $(document).keyup(function(event) {
     setTimeout(random, 300);
   }
 });
+
+window.addEventListener("resize", reposition);
+// to keep start button alway in the middle of the screen
+function reposition() {
+  BodyHeight = $("body").height();
+  CalculatedBodyHeight = BodyHeight * 0.5 - 60;
+  $("#start").css("margin-top", CalculatedBodyHeight);
+}
