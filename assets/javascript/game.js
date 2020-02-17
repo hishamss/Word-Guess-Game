@@ -3,7 +3,7 @@ var game = {
   animal_data: {
     ZEBRA: ["zebra.mp3", "zebra.jpg"],
     MONKEY: ["monkey.mp3", "monkey.jpg"],
-    LION: ["lion.mp3", "giraffe.jpg"],
+    LION: ["lion.mp3", "lion.jpg"],
     ELEPHANT: ["elephant.mp3", "elephant.jpg"],
     TIGER: ["tiger.mp3", "tiger.jpg"]
   }
@@ -15,6 +15,7 @@ var word,
   alreadyguessed = [],
   BodyHeight,
   CalculatedBodyHeight,
+  animal_sound,
   win = 0;
 function computer_choice() {
   var rand = Math.floor(Math.random() * game.zoo_animals.length);
@@ -26,6 +27,9 @@ $(document).ready(function() {
   // $(".welcom").hide();
   // $("#start").show();
   $(".main").show();
+  $("#answer").text("Let's Go Wild!!");
+  // PLACEHOLDER VALUE WHEN PAUSE FOR THE FIRST TIME
+  animal_sound = document.getElementById(game.animal_data.LION[0]);
   $(".welcom").hide();
   $("#start").hide();
   BodyHeight = $("body").height();
@@ -96,9 +100,11 @@ $(document).keyup(function(event) {
   //   if the user guessed the whole word
   if (guessed === word.length) {
     win++;
+    // THIS WILL STOP THE PRVIOUS VOICE FROM PLAYING
+    animal_sound.pause();
     // this will play the animal sound based on the cuessed word
-    console.log(game.animal_data[word][0]);
-    var animal_sound = document.getElementById(game.animal_data[word][0]);
+    animal_sound = document.getElementById(game.animal_data[word][0]);
+    console.log(animal_sound);
     animal_sound.play();
     // this will display the word after the user guess it
     $("#answer").text("");
