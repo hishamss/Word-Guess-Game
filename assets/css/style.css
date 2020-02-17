@@ -86,3 +86,12 @@ body {
   font-size: 4.25rem;
   border-radius: 1.3rem;
 }
+
+.card {
+  background: #ed7e05;
+  color: white;
+  font-family: "Lacquer", sans-serif;
+  margin: 0;
+  font-size: 4.25rem;
+  opacity: 0.9;
+}

@@ -26,13 +26,21 @@ function computer_choice() {
 
 $(document).ready(function() {
   $(".main").hide();
+  $(".welcom").hide();
+  $("#start").show();
   BodyHeight = $("body").height();
   CalculatedBodyHeight = BodyHeight * 0.5 - 60;
+  CalculatedBodyHeight1 = BodyHeight * 0.5 - 225;
   $("#start").css("margin-top", CalculatedBodyHeight);
+  $(".welcom").css("margin-top", CalculatedBodyHeight1);
   random();
   $("#start-btn").click(function() {
-    $(".main").show();
     $("#start").hide();
+    $(".welcom").show();
+    setTimeout(function() {
+      $(".welcom").hide();
+      $(".main").show();
+    }, 2500);
   });
 });
 
@@ -96,4 +104,6 @@ function reposition() {
   BodyHeight = $("body").height();
   CalculatedBodyHeight = BodyHeight * 0.5 - 60;
   $("#start").css("margin-top", CalculatedBodyHeight);
+  CalculatedBodyHeight1 = BodyHeight * 0.5 - 225;
+  $(".welcom").css("margin-top", CalculatedBodyHeight1);
 }
