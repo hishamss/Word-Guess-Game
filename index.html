@@ -34,6 +34,12 @@
       href="https://fonts.googleapis.com/css?family=Lacquer&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="icon"
+      href="assets/images/zoo-cover-rsz1.jpg"
+      type="image/jpg"
+      sizes="16x16"
+    />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <title>Document</title>
   </head>
@@ -46,9 +52,9 @@
     <div class="container welcom">
       <div class="row text-center">
         <div class="col-md-6 offset-md-3">
-          <div class="card rounded">
+          <div class="card rounded wlcome_card">
             <div class="card-body">
-              Let's Guess The Name Of The Zoo Animals!
+              Let's Guess The Name Of The Zoo Animals!!
             </div>
           </div>
         </div>
@@ -56,18 +62,47 @@
     </div>
 
     <div class="container text-center main">
-      <div>
-        <h3>Press Any Key to Start</h3>
-        <h3>Wins</h3>
-        <p id="win"></p>
-        <h3>Current Word</h3>
-        <div id="curr-word"></div>
-        <h3>Number of Guesses Remaining</h3>
-        <p id="attempts"></p>
-        <h3>Letters Already Guessed</h3>
-        <div id="failed"></div>
+      <div class="card rounded guess_card">
+        <div class="card-body">
+          <div class="row border">
+            <div class="col-md-6 border">
+              <div class="row">
+                <div class="col-md-6 border">Wins: <span id="win"></span></div>
+                <div class="col-md-6">
+                  Remaining Guesses: <span id="attempts"></span>
+                </div>
+              </div>
+              <div class="row justify-content-center border">
+                Current Word
+              </div>
+              <div
+                class="row justify-content-center border"
+                id="curr-word"
+              ></div>
+              <div class="row justify-content-center">
+                Letters Already Guessed
+              </div>
+              <div class="row justify-content-center border" id="failed"></div>
+            </div>
+            <div class="col-md-6" id="answer"></div>
+          </div>
+        </div>
       </div>
-      <div id="answer"></div>
     </div>
+    <audio id="zebra.mp3">
+      <source src="assets/sound/zebra.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="monkey.mp3">
+      <source src="assets/sound/monkey.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="tiger.mp3">
+      <source src="assets/sound/Tiger.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="elephant.mp3">
+      <source src="assets/sound/elephant.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="lion.mp3">
+      <source src="assets/sound/lion.mp3" type="audio/mp3" />
+    </audio>
   </body>
 </html>

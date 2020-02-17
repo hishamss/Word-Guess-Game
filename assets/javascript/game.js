@@ -1,15 +1,12 @@
 var game = {
-  zoo_animals: [
-    "ZEBRA",
-    "MONKEY",
-    "KOALA",
-    "RABBIT",
-    "LION",
-    "ELEPHANT",
-    "GIRAFFE",
-    "HIPPO"
-  ],
-  animal_data: { owl: ["owl.jpg", "owl.mp3"], cat: ["cat.jpg", "cat.mp3"] }
+  zoo_animals: ["ZEBRA", "MONKEY", "LION", "ELEPHANT", "TIGER"],
+  animal_data: {
+    ZEBRA: "zebra.mp3",
+    MONKEY: "monkey.mp3",
+    LION: "lion.mp3",
+    ELEPHANT: "elephant.mp3",
+    TIGER: "tiger.mp3"
+  }
 };
 var word,
   guessed,
@@ -25,14 +22,19 @@ function computer_choice() {
 }
 
 $(document).ready(function() {
-  $(".main").hide();
+  // $(".main").hide();
+  // $(".welcom").hide();
+  // $("#start").show();
+  $(".main").show();
   $(".welcom").hide();
-  $("#start").show();
+  $("#start").hide();
   BodyHeight = $("body").height();
   CalculatedBodyHeight = BodyHeight * 0.5 - 60;
   CalculatedBodyHeight1 = BodyHeight * 0.5 - 225;
+  CalculatedBodyHeight2 = BodyHeight * 0.5 - 101;
   $("#start").css("margin-top", CalculatedBodyHeight);
   $(".welcom").css("margin-top", CalculatedBodyHeight1);
+  $(".main").css("margin-top", CalculatedBodyHeight2);
   random();
   $("#start-btn").click(function() {
     $("#start").hide();
@@ -91,6 +93,9 @@ $(document).keyup(function(event) {
   //   if the user guessed the whole word
   if (guessed === word.length) {
     win++;
+    // this will play the animal sound based on the cuessed word
+    var animal_sound = document.getElementById(game.animal_data[word]);
+    animal_sound.play();
     // this will display the word after the user guess it
     $("#answer").text("The answer was " + word);
     // dilay 300 ms before call random() function
@@ -106,4 +111,6 @@ function reposition() {
   $("#start").css("margin-top", CalculatedBodyHeight);
   CalculatedBodyHeight1 = BodyHeight * 0.5 - 225;
   $(".welcom").css("margin-top", CalculatedBodyHeight1);
+  CalculatedBodyHeight2 = BodyHeight * 0.5 - 101;
+  $(".main").css("margin-top", CalculatedBodyHeight2);
 }

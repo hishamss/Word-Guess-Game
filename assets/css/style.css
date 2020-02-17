@@ -43,13 +43,12 @@ body {
   display: inline-block;
 }
 
-.main {
-  background-image: url("../images/orange.jpg");
+/* .main {
   color: white;
   width: auto;
   margin: 0 390px;
   padding: 20px 0;
-}
+} */
 
 #start-btn {
   background-color: #97a31d;
@@ -87,11 +86,18 @@ body {
   border-radius: 1.3rem;
 }
 
-.card {
+.wlcome_card {
   background: #ed7e05;
   color: white;
   font-family: "Lacquer", sans-serif;
   margin: 0;
   font-size: 4.25rem;
+  opacity: 0.9;
+}
+
+.guess_card {
+  background: #ed7e05;
+  color: white;
+  font-size: 1.5rem;
   opacity: 0.9;
 }
