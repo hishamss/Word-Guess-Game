@@ -1,11 +1,11 @@
 var game = {
   zoo_animals: ["ZEBRA", "MONKEY", "LION", "ELEPHANT", "TIGER"],
   animal_data: {
-    ZEBRA: "zebra.mp3",
-    MONKEY: "monkey.mp3",
-    LION: "lion.mp3",
-    ELEPHANT: "elephant.mp3",
-    TIGER: "tiger.mp3"
+    ZEBRA: ["zebra.mp3", "zebra.jpg"],
+    MONKEY: ["monkey.mp3", "monkey.jpg"],
+    LION: ["lion.mp3", "giraffe.jpg"],
+    ELEPHANT: ["elephant.mp3", "elephant.jpg"],
+    TIGER: ["tiger.mp3", "tiger.jpg"]
   }
 };
 var word,
@@ -53,7 +53,10 @@ function random() {
   for (i = 0; i < word.length; i++) {
     // $("#curr-word").append("<p id='p" + i + "'" + "><strong>_</strong></p>");
     $("#curr-word").append(
-      "<button class='btn btn-primary dashes' id='b" + i + "'" + "></button>"
+      "<button class='btn btn-primary btn-lg dashes' id='b" +
+        i +
+        "'" +
+        "></button>"
     );
   }
   guessed = 0;
@@ -94,10 +97,16 @@ $(document).keyup(function(event) {
   if (guessed === word.length) {
     win++;
     // this will play the animal sound based on the cuessed word
-    var animal_sound = document.getElementById(game.animal_data[word]);
+    console.log(game.animal_data[word][0]);
+    var animal_sound = document.getElementById(game.animal_data[word][0]);
     animal_sound.play();
     // this will display the word after the user guess it
-    $("#answer").text("The answer was " + word);
+    $("#answer").text("");
+    $("#answer").append(
+      "<img src='assets/images/" +
+        game.animal_data[word][1] +
+        "' class='img-thumbnail img-fluid rounded'>"
+    );
     // dilay 300 ms before call random() function
     setTimeout(random, 300);
   }
