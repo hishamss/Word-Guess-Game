@@ -67,6 +67,7 @@ body {
   border-color: #97a31d;
   font-size: 4.25rem;
   border-radius: 1.3rem;
+  opacity: 0.9;
 }
 
 #start-btn:active {
@@ -76,6 +77,7 @@ body {
   border-color: #97a31d;
   font-size: 4.25rem;
   border-radius: 1.3rem;
+  opacity: 0.9;
 }
 
 #start-btn:focus {
@@ -85,6 +87,47 @@ body {
   border-color: #97a31d;
   font-size: 4.25rem;
   border-radius: 1.3rem;
+  opacity: 0.9;
+}
+
+#play_again-btn {
+  background-color: #97a31d;
+  color: #6f4626;
+  font-family: "Lacquer", sans-serif;
+  border-color: #97a31d;
+  font-size: 4.25rem;
+  border-radius: 1.3rem;
+  opacity: 0.9;
+}
+
+#play_again-btn:hover {
+  background-color: #0f4825;
+  color: #6f4626;
+  font-family: "Lacquer", sans-serif;
+  border-color: #97a31d;
+  font-size: 4.25rem;
+  border-radius: 1.3rem;
+  opacity: 0.9;
+}
+
+#play_again-btn:active {
+  background-color: #97a31d;
+  color: #6f4626;
+  font-family: "Lacquer", sans-serif;
+  border-color: #97a31d;
+  font-size: 4.25rem;
+  border-radius: 1.3rem;
+  opacity: 0.9;
+}
+
+#play_again-btn:focus {
+  background-color: #0f4825;
+  color: #6f4626;
+  font-family: "Lacquer", sans-serif;
+  border-color: #97a31d;
+  font-size: 4.25rem;
+  border-radius: 1.3rem;
+  opacity: 0.9;
 }
 
 .wlcome_card {
@@ -101,6 +144,14 @@ body {
   color: white;
   font-size: 1.5rem;
   opacity: 0.9;
+}
+
+.game_over_msg {
+  /* background: #ed7e05; */
+  color: black;
+  font-family: "Lacquer", sans-serif;
+  font-size: 12rem;
+  font-weight: bold;
 }
 
 .fix-height {

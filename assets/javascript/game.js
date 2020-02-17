@@ -23,22 +23,22 @@ function computer_choice() {
 }
 
 $(document).ready(function() {
-  // $(".main").hide();
-  // $(".welcom").hide();
-  // $("#start").show();
-  $(".main").show();
+  $(".main").hide();
+  $(".welcom").hide();
+  $(".game_over").hide();
+  $("#start").show();
   $("#answer").text("Let's Go Wild!!");
   // PLACEHOLDER VALUE WHEN PAUSE FOR THE FIRST TIME
   animal_sound = document.getElementById(game.animal_data.LION[0]);
-  $(".welcom").hide();
-  $("#start").hide();
   BodyHeight = $("body").height();
   CalculatedBodyHeight = BodyHeight * 0.5 - 60;
   CalculatedBodyHeight1 = BodyHeight * 0.5 - 225;
   CalculatedBodyHeight2 = BodyHeight * 0.5 - 101;
+  CalculatedBodyHeight3 = BodyHeight * 0.5 - 92;
   $("#start").css("margin-top", CalculatedBodyHeight);
   $(".welcom").css("margin-top", CalculatedBodyHeight1);
   $(".main").css("margin-top", CalculatedBodyHeight2);
+  $(".game_over").css("margin-top", CalculatedBodyHeight3);
   random();
   $("#start-btn").click(function() {
     $("#start").hide();
@@ -47,6 +47,10 @@ $(document).ready(function() {
       $(".welcom").hide();
       $(".main").show();
     }, 2500);
+  });
+
+  $("#play_again-btn").click(function() {
+    location.replace("index.html");
   });
 });
 
@@ -94,7 +98,8 @@ $(document).keyup(function(event) {
   }
   //   Game Over
   if (attempts == 0) {
-    location.replace("GameOver.html");
+    $(".main").hide();
+    $(".game_over").show();
   }
 
   //   if the user guessed the whole word
@@ -128,4 +133,6 @@ function reposition() {
   $(".welcom").css("margin-top", CalculatedBodyHeight1);
   CalculatedBodyHeight2 = BodyHeight * 0.5 - 101;
   $(".main").css("margin-top", CalculatedBodyHeight2);
+  CalculatedBodyHeight3 = BodyHeight * 0.5 - 92;
+  $(".game_over").css("margin-top", CalculatedBodyHeight3);
 }
