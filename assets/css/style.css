@@ -147,7 +147,6 @@ body {
 }
 
 .game_over_msg {
-  /* background: #ed7e05; */
   color: black;
   font-family: "Lacquer", sans-serif;
   font-size: 12rem;

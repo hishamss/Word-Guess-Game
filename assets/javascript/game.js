@@ -27,7 +27,10 @@ $(document).ready(function() {
   $(".welcom").hide();
   $(".game_over").hide();
   $("#start").show();
-  $("#answer").text("Let's Go Wild!!");
+  // $("#answer").text("Let's Go Wild!!");
+  $("#answer").append(
+    "<img src='assets/images/guess.jpg' class='img-thumbnail img-fluid rounded'>"
+  );
   // PLACEHOLDER VALUE WHEN PAUSE FOR THE FIRST TIME
   animal_sound = document.getElementById(game.animal_data.LION[0]);
   BodyHeight = $("body").height();
