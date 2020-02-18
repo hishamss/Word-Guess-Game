@@ -6,4 +6,4 @@ If the user guess the name right, his score will increase by one and each time h
 Steps:
 
 1. the first screen is start button to start the game.
-   ![Start Button]("assets/images/step1.jpg")
+   ![Start Button](assets/images/step1.jpg)
