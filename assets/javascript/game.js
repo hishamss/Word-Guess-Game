@@ -61,7 +61,6 @@ $(document).ready(function() {
   $(".welcom").css("margin-top", CalculatedBodyHeight1);
   $(".main").css("margin-top", CalculatedBodyHeight2);
   $(".game_over").css("margin-top", CalculatedBodyHeight3);
-  // random();
   game.random_pick();
   $("#start-btn").click(function() {
     $("#start").hide();
@@ -73,7 +72,8 @@ $(document).ready(function() {
   });
 
   $("#play_again-btn").click(function() {
-    location.replace("index.html");
+    // location.replace("index.html");
+    location.reload(true);
   });
 
   // listen to any key pressed and check if the pressed key is in the word picked randomlly.
