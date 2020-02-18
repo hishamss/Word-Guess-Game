@@ -16,5 +16,5 @@ Steps:
 
 4. Every time the user guess the word it will display the animal picture and play the animal voice
 
-5. If the user uses all his attempts, he will get Game Over Message and he can press Play Again to start over.
+5. If the user uses all his attempts, he will get Game Over Message and sound effect then he can press Play Again to start over.
    ![Game OVer](assets/images/step5.jpg)
