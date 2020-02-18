@@ -7,3 +7,9 @@ Steps:
 
 1. the first screen is start button to start the game.
    ![Start Button](assets/images/step1.jpg)
+
+2. After clicking on start button, the following message will be displayed on the screen for 2.5 sec
+   ![welcome Message](assets/images/step2.jpg)
+
+3. Then the user start guessing the name of one of the animals shown on right to the guessing area, as shown below
+   ![zoo animals](assets/images/step3.jpg)
