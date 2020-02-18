@@ -1,11 +1,10 @@
 /* to make the body and html alway fill the entire screen */
-html,
 body {
-  margin: 0;
-  height: 100%;
-}
-
-body {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
   background-image: url("../images/zoo-cover-rsz1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -157,7 +156,7 @@ body {
 }
 
 .fix-height {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   line-height: 7rem;
   font-family: "Lacquer", sans-serif;
 }

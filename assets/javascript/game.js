@@ -55,7 +55,7 @@ $(document).ready(function() {
   BodyHeight = $("body").height();
   CalculatedBodyHeight = BodyHeight * 0.5 - 60;
   CalculatedBodyHeight1 = BodyHeight * 0.5 - 102;
-  CalculatedBodyHeight2 = BodyHeight * 0.5 - 101;
+  CalculatedBodyHeight2 = BodyHeight * 0.5 - 275;
   CalculatedBodyHeight3 = BodyHeight * 0.5 - 92;
   $("#start").css("margin-top", CalculatedBodyHeight);
   $(".welcom").css("margin-top", CalculatedBodyHeight1);
@@ -134,7 +134,7 @@ $(document).ready(function() {
     $("#start").css("margin-top", CalculatedBodyHeight);
     CalculatedBodyHeight1 = BodyHeight * 0.5 - 102;
     $(".welcom").css("margin-top", CalculatedBodyHeight1);
-    CalculatedBodyHeight2 = BodyHeight * 0.5 - 101;
+    CalculatedBodyHeight2 = BodyHeight * 0.5 - 275;
     $(".main").css("margin-top", CalculatedBodyHeight2);
     CalculatedBodyHeight3 = BodyHeight * 0.5 - 92;
     $(".game_over").css("margin-top", CalculatedBodyHeight3);
