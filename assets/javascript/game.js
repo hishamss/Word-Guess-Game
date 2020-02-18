@@ -101,6 +101,8 @@ $(document).ready(function() {
     if (attempts == 0) {
       $(".main").hide();
       $(".game_over").show();
+      var Over = document.getElementById("GameOver.mp3");
+      Over.play();
     }
 
     //   if the user guessed the whole word
