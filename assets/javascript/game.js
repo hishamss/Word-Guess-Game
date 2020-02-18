@@ -54,7 +54,7 @@ $(document).ready(function() {
   animal_sound = document.getElementById(game.animal_data.LION[0]);
   BodyHeight = $("body").height();
   CalculatedBodyHeight = BodyHeight * 0.5 - 60;
-  CalculatedBodyHeight1 = BodyHeight * 0.5 - 225;
+  CalculatedBodyHeight1 = BodyHeight * 0.5 - 102;
   CalculatedBodyHeight2 = BodyHeight * 0.5 - 101;
   CalculatedBodyHeight3 = BodyHeight * 0.5 - 92;
   $("#start").css("margin-top", CalculatedBodyHeight);
@@ -132,7 +132,7 @@ $(document).ready(function() {
     BodyHeight = $("body").height();
     CalculatedBodyHeight = BodyHeight * 0.5 - 60;
     $("#start").css("margin-top", CalculatedBodyHeight);
-    CalculatedBodyHeight1 = BodyHeight * 0.5 - 225;
+    CalculatedBodyHeight1 = BodyHeight * 0.5 - 102;
     $(".welcom").css("margin-top", CalculatedBodyHeight1);
     CalculatedBodyHeight2 = BodyHeight * 0.5 - 101;
     $(".main").css("margin-top", CalculatedBodyHeight2);
