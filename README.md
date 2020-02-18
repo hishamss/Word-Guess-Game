@@ -11,5 +11,10 @@ Steps:
 2. After clicking on start button, the following message will be displayed on the screen for 2.5 sec
    ![welcome Message](assets/images/step2.jpg)
 
-3. Then the user start guessing the name of one of the animals shown on right to the guessing area, as shown below
+3. Then the user start guessing the name of one of the animals shown to the right of the guessing area, as shown below
    ![zoo animals](assets/images/step3.jpg)
+
+4. Every time the user guess the word it will display the animal picture and play the animal voice
+
+5. If the user uses all his attempts, he will get Game Over Message and he can press Play Again to start over.
+   ![Game OVer](assets/images/step5.jpg)
