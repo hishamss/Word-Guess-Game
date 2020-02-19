@@ -14,7 +14,7 @@ Steps:
 3. Then the user start guessing the name of one of the animals shown to the right of the guessing area, as shown below
    ![zoo animals](assets/images/step3.jpg)
 
-4. Every time the user guess the word it will display the animal picture and play the animal voice
+4. Every time the user guess the word it will display the animal picture and play the animal voice for 3 sec then switch back to guess pic.
 
 5. If the user uses all his attempts, he will get Game Over Message and sound effect and the jungle sound will stop play. the user can click Play Again button to start over.
    ![Game OVer](assets/images/step5.jpg)
