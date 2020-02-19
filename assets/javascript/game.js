@@ -23,6 +23,10 @@ var game = {
   },
   // this function will be called after the page load or the user guess the whole word
   random_pick: function() {
+    $("#answer").text("");
+    $("#answer").append(
+      "<img src='assets/images/guess.jpg' class='img-thumbnail img-fluid rounded'>"
+    );
     this.computer_choice();
     $("#curr-word").text("");
     for (i = 0; i < word.length; i++) {
@@ -48,9 +52,9 @@ $(document).ready(function() {
   $(".welcom").hide();
   $(".game_over").hide();
   $("#start").show();
-  $("#answer").append(
-    "<img src='assets/images/guess.jpg' class='img-thumbnail img-fluid rounded'>"
-  );
+  // $("#answer").append(
+  //   "<img src='assets/images/guess.jpg' class='img-thumbnail img-fluid rounded'>"
+  // );
   // PLACEHOLDER VALUE WHEN PAUSE FOR THE FIRST TIME
   animal_sound = document.getElementById(game.animal_data.LION[0]);
   BodyHeight = $("body").height();
@@ -113,12 +117,11 @@ $(document).ready(function() {
     //   if the user guessed the whole word
     if (guessed === word.length) {
       win++;
-      // THIS WILL STOP THE PRVIOUS VOICE FROM PLAYING
-      animal_sound.pause();
+
       // this will play the animal sound based on the cuessed word
       animal_sound = document.getElementById(game.animal_data[word][0]);
       animal_sound.play();
-      // this will display the word after the user guess it
+      // this will display the word animal imgae after the user guess it
       $("#answer").text("");
       $("#answer").append(
         "<img src='assets/images/" +
@@ -126,7 +129,11 @@ $(document).ready(function() {
           "' class='img-thumbnail img-fluid rounded'>"
       );
       // dilay 300 ms before call random() function
-      setTimeout(game.random_pick(), 300);
+      setTimeout(function() {
+        // THIS WILL STOP THE PRVIOUS VOICE FROM PLAYING
+        animal_sound.pause();
+        game.random_pick();
+      }, 3000);
     }
   });
 
