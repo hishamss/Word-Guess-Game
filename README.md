@@ -5,7 +5,7 @@ If the user guess the name right, his score will increase by one and each time h
 
 Steps:
 
-1. the first screen is start button to start the game.
+1. the first screen is start button to start the game and the uesr hears jungle background sound during the game.
    ![Start Button](assets/images/step1.jpg)
 
 2. After clicking on start button, the following message will be displayed on the screen for 2.5 sec
@@ -16,5 +16,5 @@ Steps:
 
 4. Every time the user guess the word it will display the animal picture and play the animal voice
 
-5. If the user uses all his attempts, he will get Game Over Message and sound effect then he can press Play Again to start over.
+5. If the user uses all his attempts, he will get Game Over Message and sound effect and the jungle sound will stop play. the user can click Play Again button to start over.
    ![Game OVer](assets/images/step5.jpg)
