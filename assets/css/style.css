@@ -149,7 +149,7 @@ body {
 }
 
 .game_over_msg {
-  color: black;
+  color: #f1b306;
   font-family: "Lacquer", sans-serif;
   font-size: 12rem;
   font-weight: bold;
