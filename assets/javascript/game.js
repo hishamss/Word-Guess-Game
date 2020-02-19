@@ -6,6 +6,7 @@ var word,
   BodyHeight,
   CalculatedBodyHeight,
   animal_sound,
+  background_sound,
   win = 0;
 var game = {
   zoo_animals: ["ZEBRA", "MONKEY", "LION", "ELEPHANT", "TIGER"],
@@ -65,6 +66,9 @@ $(document).ready(function() {
   $("#start-btn").click(function() {
     $("#start").hide();
     $(".welcom").show();
+    background_sound = document.getElementById("jungle.mp3");
+    background_sound.loop = true;
+    background_sound.play();
     setTimeout(function() {
       $(".welcom").hide();
       $(".main").show();
@@ -101,6 +105,7 @@ $(document).ready(function() {
     if (attempts == 0) {
       $(".main").hide();
       $(".game_over").show();
+      background_sound.pause();
       var Over = document.getElementById("GameOver.mp3");
       Over.play();
     }
@@ -112,7 +117,6 @@ $(document).ready(function() {
       animal_sound.pause();
       // this will play the animal sound based on the cuessed word
       animal_sound = document.getElementById(game.animal_data[word][0]);
-      console.log(animal_sound);
       animal_sound.play();
       // this will display the word after the user guess it
       $("#answer").text("");
